@@ -1,30 +1,42 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | PRAVEEN SINGH              |
+| Date         | 03/18/2024                 |
+| Course       | Spring 2024                |
+| Assignment # | 4                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+The objective of this assignment is to develop a software system that facilitates the integration of the old system's
+interface with the new system’s interface.
+
+* It allows system to retrieve customer data using the new HTTPS system and also has an adapter to utilize the new system to retrieve the data from the legacy system.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/praveensingh3123/CS665-Assignment-4
 
 # Implementation Description 
 
+* Flexibility of Implementation: This code emphasizes flexibility by utilizing the Adapter pattern for the implementation where we can add more legacy systems and retrieve data from them using the new system. Similarly, we can multiple new systems that we can use to retrieve data from the old systems.
+* Simplicity and Understandability: The code is simple to understand as each type of data access method is stored in a separate class and whenever new type of system is added we create a new class for it.
+* Avoiding Duplicated Code: Use of Adapter pattern here ensures that there is no duplicate code in the program and interface is used for HTTPS and USB data retrieval classes so that we can reuse the methods.
 
-For each assignment, please answer the following:
+**Design**
 
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+The application adheres to the Object-Oriented Programming (OOP) principles and efficiently implements the Adapter design pattern. The primary entities in the system are:
 
+* AccessData_HTTPS
+* AccessData_USB
+* CustomerData_HTTPS
+* CustomerData_USB
+* USBToHTTPDataAccessor
+
+**JUnit Tests:**
+
+JUnit tests have been designed to validate:
+
+* The creation of different data accessing types and validating the customer ids
+* Validating the data which is retrieved by both the methods.
 
 # Maven Commands
 
